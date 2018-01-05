@@ -1,0 +1,6 @@
+include LICENSE.MIT
+include MANIFEST.in
+include README.*
+include pkg/*
+include setup.py
+recursive-include anyconfig_cbor_backend *.py
