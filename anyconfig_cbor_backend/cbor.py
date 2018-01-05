@@ -19,13 +19,8 @@ Changelog:
     .. versionadded:: 0.8.3
 """
 from __future__ import absolute_import
-
-try:
-    import cbor2 as cbor
-except ImportError:
-    import cbor
-
 import anyconfig.backend.base
+import cbor
 
 
 class Parser(anyconfig.backend.base.StringStreamFnParser,
