@@ -28,6 +28,7 @@ class Parser(anyconfig.backend.base.StringStreamFnParser,
     """Parser for CBOR files.
     """
     _type = "cbor"
+    _priority = 10
     _extensions = ["cbor"]
     _loads_opts = ["tag_hook", "object_hook"]
     _dump_opts = ["datetime_as_timestamp", "timezone", "value_sharing",
