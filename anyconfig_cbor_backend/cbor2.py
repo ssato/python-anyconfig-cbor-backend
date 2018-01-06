@@ -6,12 +6,12 @@
 r"""CBOR backend:
 
 - Format to support: CBOR, http://cbor.io, https://tools.ietf.org/html/rfc7049
-- Requirements: cbor, https://pypi.python.org/pypi/cbor2
+- Requirements: cbor2, https://pypi.python.org/pypi/cbor2
 - Development Status :: 4 - Beta
 - Limitations: None obvious
 - Special options:
 
-  - All options of cbor.load{s,} and cbor.dump{s,} should work.
+  - All options of cbor2.load{s,} and cbor2.dump{s,} should work.
   - See also: https://github.com/agronholm/cbor2/blob/master/cbor2/
 
 Changelog:
