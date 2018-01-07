@@ -14,20 +14,16 @@ python-anyconfig-cbor-backend
    :target: https://landscape.io/github/ssato/python-anyconfig-cbor-backend/master
    :alt: Code Health
 
-This is a backend module for anyconfig to support to load and dump CBOR files.
+This is a backend module for python-anyconfig to support to load and dump CBOR
+files with using cobr, https://pypi.python.org/pypi/cbor.
 
 - Author: Satoru SATOH <ssato@redhat.com>
 - License: MIT
 
 SEE ALSO:
 
-- anyconfig: https://pypi.python.org/pypi/anyconfig
+- python-anyconfig: https://pypi.python.org/pypi/anyconfig
 - CBOR spec: http://cbor.io
-- PyPI modules to support CBOR [de]seriazation:
-
-  - cbor: https://pypi.python.org/pypi/cbor
-  - cbor2: https://pypi.python.org/pypi/cbor2
-
 - Download:
 
   - PyPI: https://pypi.python.org/pypi/anyconfig-cbor-backend
@@ -38,7 +34,7 @@ Build & Install
 
 If you're Fedora or Red Hat Enterprise Linux user, try::
 
-  $ python setup.py srpm && mock dist/SRPMS/<package>-<ver_dist>.src.rpm
+  $ python setup.py srpm && mock dist/<package>-<ver_dist>.src.rpm
   
 or::
 
