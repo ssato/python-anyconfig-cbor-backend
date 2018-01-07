@@ -1,4 +1,4 @@
-"""anyconfig backend to support Java properties files.
+"""anyconfig backend to support CBOR files.
 """
 from __future__ import absolute_import
 from .cbor import Parser
