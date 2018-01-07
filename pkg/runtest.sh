@@ -20,13 +20,13 @@ if test "x${nprocs}" != "x0" ; then
     fi
 fi
 
-if `which pep8 2>&1 > /dev/null`; then
+if `which pycodestyle 2>&1 > /dev/null`; then
     #pep8_opts="--statistics --benchmark"
     if `which flake8 2>&1 > /dev/null`; then
         pep8_opts="$pep8_opts --doctests"
         function _pep8 () { flake8 $pep8_opts $@; }
     else
-        function _pep8 () { pep8 $pep8_opts $@; }
+        function _pep8 () { pycodestyle $pep8_opts $@; }
     fi
 else
     function _pep8 () { :; }

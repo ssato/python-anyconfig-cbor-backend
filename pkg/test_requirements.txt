@@ -4,5 +4,5 @@ cbor2
 coveralls
 # flake8  # disabled until 'pkg_resources.VersionConflict' error.
 nose
-pep8
+pycodestyle
 pylint
