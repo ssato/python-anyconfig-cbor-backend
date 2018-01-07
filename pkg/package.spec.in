@@ -43,8 +43,7 @@ BuildRequires:  python3-setuptools
 %package     -n python2-%{pkgname}
 Summary:        %{sumtxt}
 Requires:       python2-anyconfig
-Requires:       python2-cbor2
-#Requires:       python2-cbor
+Requires:       python2-cbor
 %{?python_provide:%python_provide python2-%{pkgname}}
 
 %description -n python2-%{pkgname} %{desctxt}
@@ -53,7 +52,7 @@ Requires:       python2-cbor2
 %package     -n python3-%{pkgname}
 Summary:        %{sumtxt}
 Requires:       python3-anyconfig
-Requires:       python3-cbor2
+Requires:       python3-cbor
 %{?python_provide:%python_provide python3-%{pkgname}}
 
 %description -n python3-%{pkgname} %{desctxt}
