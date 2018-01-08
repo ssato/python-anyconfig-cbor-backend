@@ -60,7 +60,7 @@ Requires:       python3-cbor
 %endif
 
 %prep
-%autosetup -n %{pkgname}-%{version}
+%autosetup   -n %{pkgname}-%{version}
 
 %build
 %py2_build
@@ -74,7 +74,7 @@ Requires:       python3-cbor
 %py3_install
 %endif
 
-%files -n python2-%{pkgname}
+%files       -n python2-%{pkgname}
 %doc README.rst
 %if 0%{?rhel} == 7
 %{python_sitelib}/*
@@ -83,11 +83,11 @@ Requires:       python3-cbor
 %endif
 
 %if %{with python3}
-%files -n python3-%{pkgname}
+%files       -n python3-%{pkgname}
 %doc README.rst
 %{python3_sitelib}/*
 %endif
 
 %changelog
-* Sat Jan  6 2018 Satoru SATOH <ssato@redhat.com> - 0.0.1-1
+* Mon Jan  8 2018 Satoru SATOH <ssato@redhat.com> - 0.0.1-1
 - Initial packaging
