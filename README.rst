@@ -15,7 +15,7 @@ python-anyconfig-cbor-backend
    :alt: Code Health
 
 This is a backend module for python-anyconfig to support to load and dump CBOR
-files with using cobr, https://pypi.python.org/pypi/cbor.
+files with using cbor, https://pypi.python.org/pypi/cbor.
 
 - Author: Satoru SATOH <ssato@redhat.com>
 - License: MIT
