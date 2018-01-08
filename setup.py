@@ -68,19 +68,22 @@ _CLASSIFIERS = ["Development Status :: 4 - Beta",
                 "License :: OSI Approved :: MIT License"]
 
 
-TESTS_REQ = [l.rstrip() for l in open("pkg/test_requirements.txt").readlines()
-             if l and not l.startswith('#')]
+def _parse_requirements_txt(filepath="pkg/requirements.txt"):
+    return [l.rstrip() for l in open(filepath).readlines()
+            if l and not l.startswith('#')]
+
 
 setup(name=PACKAGE,
       version=VERSION,
-      description="Backend module for python-anyconfig to support CBOR load and dump",
+      description="Backend module for python-anyconfig to load and dump CBOR data",
       long_description=open("README.rst").read(),
       author="Satoru SATOH",
       author_email="ssato@redhat.com",
       license="MIT",
       url="https://github.com/ssato/python-anyconfig-cbor-backend",
       classifiers=_CLASSIFIERS,
-      tests_require=TESTS_REQ,
+      install_require=_parse_requirements_txt(),
+      tests_require=_parse_requirements_txt("pkg/test_requirements.txt"),
       packages=find_packages(),
       include_package_data=True,
       cmdclass=dict(srpm=SrpmCommand, rpm=RpmCommand),
