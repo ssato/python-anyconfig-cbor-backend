@@ -1,4 +1,4 @@
-from setuptools import setup, Command
+from setuptools import setup, Command, find_packages
 
 import datetime
 import os
@@ -84,7 +84,7 @@ setup(name=PACKAGE,
       classifiers=_CLASSIFIERS,
       install_require=_parse_requirements_txt(),
       tests_require=_parse_requirements_txt("pkg/test_requirements.txt"),
-      packages=["anyconfig_cbor_backend"],
+      packages=find_packages(exclude=['tests']),
       include_package_data=True,
       cmdclass=dict(srpm=SrpmCommand, rpm=RpmCommand),
       entry_points=open(os.path.join(os.curdir,
