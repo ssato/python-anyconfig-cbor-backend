@@ -3,7 +3,7 @@
 # License: MIT
 #
 # pylint: disable=missing-docstring,invalid-name
-from __future__ import absolute_import
+from __future__ import absolute_import, print_function
 
 import os.path
 import os
@@ -22,7 +22,12 @@ class Test(unittest.TestCase):
     conf_path = os.path.join(_CURDIR, "0.cbor")
 
     def test_20_load(self):
-        cnf = anyconfig.load(self.conf_path)
+        try:
+            cnf = anyconfig.load(self.conf_path)
+        except anyconfig.UnknownFileTypeError:
+            print("all types=%r" % anyconfig.list_types())
+            raise
+
         ref = {_bytes('a'): 0,
                _bytes('b'): _bytes('bbb'),
                _bytes('c'): 5,
