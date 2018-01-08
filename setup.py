@@ -6,7 +6,7 @@ import subprocess
 
 
 PACKAGE = "anyconfig-cbor-backend"
-VERSION = "0.0.2"
+VERSION = "0.0.3"
 
 # For daily snapshot versioning mode:
 if os.environ.get("_SNAPSHOT_BUILD", None) is not None:
@@ -82,7 +82,7 @@ setup(name=PACKAGE,
       license="MIT",
       url="https://github.com/ssato/python-anyconfig-cbor-backend",
       classifiers=_CLASSIFIERS,
-      install_require=_parse_requirements_txt(),
+      install_requires=_parse_requirements_txt(),
       tests_require=_parse_requirements_txt("pkg/test_requirements.txt"),
       packages=find_packages(exclude=['tests']),
       include_package_data=True,
