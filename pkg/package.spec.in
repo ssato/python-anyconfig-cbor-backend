@@ -4,7 +4,7 @@
 
 %global sumtxt Backend module for python-anyconfig to load and dump CBOR data
 %global desctxt \
-This is a backend module for python-anyconfig to load and ddump CBOR data with\
+This is a backend module for python-anyconfig to load and dump CBOR data with\
 using cbor.\
 \
 python-anyconfig is a python library to provide common APIs to load dump\
