@@ -2,9 +2,10 @@
 %global pkgname anyconfig-%{bename}-backend
 %global debug_package %{nil}
 
-%global sumtxt Backend module for python-anyconfig to support CBOR load and dump
+%global sumtxt Backend module for python-anyconfig to load and dump CBOR data
 %global desctxt \
-This is a CBOR backend module for python-anyconfig.\
+This is a backend module for python-anyconfig to load and ddump CBOR data with\
+using cbor.\
 \
 python-anyconfig is a python library to provide common APIs to load dump\
 various configuration files like INI, JSON and YAML.
