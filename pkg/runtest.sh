@@ -7,7 +7,7 @@ nosetests_opts="-c ${curdir}/nose.cfg"
 nprocs=$(echo ${NOSE_PROCESSES})
 
 if `env | grep -q 'WITH_COVERAGE' 2>/dev/null`; then
-    nosetests_opts="${nosetests_opts} --with-coverage --cover-tests"
+    nosetests_opts="${nosetests_opts} --with-coverage --cover-tests --cover-html --cover-xml"
     nprocs=0  # It seems that coverage does not like parallel tests.
 fi
 
