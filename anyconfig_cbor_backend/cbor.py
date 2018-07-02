@@ -30,6 +30,7 @@ class Parser(anyconfig.backend.base.StringStreamFnParser,
     _type = "cbor"
     _extensions = ["cbor"]
     _dump_opts = ["sort_keys"]
+    _allow_primitives = True
 
     _load_from_string_fn = anyconfig.backend.base.to_method(cbor.loads)
     _load_from_stream_fn = anyconfig.backend.base.to_method(cbor.load)
