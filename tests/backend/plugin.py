@@ -11,7 +11,7 @@ import unittest
 
 import anyconfig
 
-from tests.common import _bytes, dicts_equal
+from tests.common import to_bytes as _b, dicts_equal
 
 
 _CURDIR = os.path.dirname(__file__)
@@ -28,11 +28,10 @@ class Test(unittest.TestCase):
             print("all types=%r" % anyconfig.list_types())
             raise
 
-        ref = {_bytes('a'): 0,
-               _bytes('b'): _bytes('bbb'),
-               _bytes('c'): 5,
-               _bytes('sect0'): {_bytes('d'): [_bytes('x'), _bytes('y'),
-                                               _bytes('z')]}}
+        ref = {_b('a'): 0,
+               _b('b'): _b('bbb'),
+               _b('c'): 5,
+               _b('sect0'): {_b('d'): [_b('x'), _b('y'), _b('z')]}}
         self.assertTrue(dicts_equal(cnf, ref))
 
 # vim:sw=4:ts=4:et:
