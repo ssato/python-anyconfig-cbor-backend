@@ -2,7 +2,6 @@
 %global pkgname anyconfig-%{bename}-backend
 %global debug_package %{nil}
 
-%global sumtxt Backend module for python-anyconfig to load and dump CBOR data
 %global desctxt \
 This is a backend module for python-anyconfig to load and dump CBOR data with\
 using cbor.\
@@ -13,12 +12,11 @@ various configuration files like INI, JSON and YAML.
 Name:           python-%{pkgname}
 Version:        @VERSION@
 Release:        1%{?dist}
-Summary:        %{sumtxt}
+Summary:        Backend module for python-anyconfig to load and dump CBOR data
 Group:          Development/Libraries
 License:        MIT
 URL:            https://github.com/ssato/%{name}
-#Source0:        https://github.com/ssato/%{name}/tarball/master/%{name}-%{version}.tar.gz
-Source0:        %{pkgname}-%{version}.tar.gz
+Source0:        %{url}/archive/RELEASE_%{version}.tar.gz
 BuildArch:      noarch
 
 %if 0%{?fedora} || 0%{?rhel} > 7
@@ -42,7 +40,7 @@ BuildRequires:  python3-setuptools
 %description %{desctxt}
 
 %package     -n python2-%{pkgname}
-Summary:        %{sumtxt}
+Summary:        %{summary}
 Requires:       python2-anyconfig
 Requires:       python2-cbor
 %{?python_provide:%python_provide python2-%{pkgname}}
@@ -51,7 +49,7 @@ Requires:       python2-cbor
 
 %if %{with python3}
 %package     -n python3-%{pkgname}
-Summary:        %{sumtxt}
+Summary:        %{summary}
 Requires:       python3-anyconfig
 Requires:       python3-cbor
 %{?python_provide:%python_provide python3-%{pkgname}}
@@ -89,6 +87,10 @@ Requires:       python3-cbor
 %endif
 
 %changelog
+* Wed Sep  4 2019 Satoru SATOH <satoru.satoh@gmail.com> - 0.0.4-1
+- fix: cleanup the RPM SPEC
+- change: Add setup.cfg to cleanup packaging
+
 * Tue Jan  9 2018 Satoru SATOH <ssato@redhat.com> - 0.0.3-1
 - fix: correct a typo in a keyword argument for setup() in setup.py
 
