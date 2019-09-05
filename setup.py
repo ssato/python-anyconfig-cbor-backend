@@ -10,7 +10,7 @@ import setuptools.command.bdist_rpm
 
 # It might throw IndexError and so on.
 VERSION = [re.search(r'^__version__ = "([^"]+)"', l).groups()[0] for l
-           in open(glob.glob("*/*.py")[0]).readlines()
+           in open("anyconfig_cbor_backend/__init__.py").readlines()
            if "__version__" in l][0]
 
 # For daily snapshot versioning mode:
