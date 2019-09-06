@@ -1,3 +1,4 @@
+---
 # see: http://about.travis-ci.org/docs/user/languages/python/
 language: python
 python:
@@ -6,7 +7,7 @@ python:
     - 3.6
 matrix:
   include:
-    - python 3.7
+    - python: 3.7
       dist: xenial
       sudo: true
 
@@ -25,3 +26,5 @@ notifications:
         recipients:
             - satoru.satoh+github@gmail.com
         on_failure: always
+
+# vim: sw=2:ts=2:et:
