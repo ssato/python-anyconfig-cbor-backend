@@ -79,9 +79,7 @@ Requires:       python3-cbor
 
 %changelog
 * Wed Sep  4 2019 Satoru SATOH <satoru.satoh@gmail.com> - 0.0.4-1
-- fix: [rpm] cleanup the RPM SPEC
-- change: Add setup.cfg to cleanup packaging
-- change: [rpm] build Python 3 only by default
+- New upstream release
 
 * Tue Jan  9 2018 Satoru SATOH <ssato@redhat.com> - 0.0.3-1
 - fix: correct a typo in a keyword argument for setup() in setup.py
