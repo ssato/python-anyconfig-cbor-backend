@@ -11,7 +11,7 @@ import unittest
 
 import anyconfig
 
-from tests.common import to_bytes as _b, dicts_equal
+from tests.common import _bytes as _b, dicts_equal
 
 
 _CURDIR = os.path.dirname(__file__)
