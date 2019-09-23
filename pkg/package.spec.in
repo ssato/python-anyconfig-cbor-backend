@@ -77,6 +77,9 @@ Requires:       python3-cbor
 %{python3_sitelib}/*
 
 %changelog
+* Mon Sep 23 2019 Satoru SATOH <satoru.satoh@gmail.com> - 0.1.0-1
+- New upstream release
+
 * Wed Sep  4 2019 Satoru SATOH <satoru.satoh@gmail.com> - 0.0.4-1
 - New upstream release
 

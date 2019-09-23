@@ -3,5 +3,5 @@
 from __future__ import absolute_import
 from .cbor import Parser
 
-__version__ = "0.0.3"
+__version__ = "0.1.0"
 __all__ = ["Parser"]
