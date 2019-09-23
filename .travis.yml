@@ -1,18 +1,17 @@
----
 # see: http://about.travis-ci.org/docs/user/languages/python/
 language: python
 python:
-    #- 2.6
     - 2.7
     - 3.6
-matrix:
-  include:
-    - python: 3.7
-      dist: xenial
-      sudo: true
-
 # see: http://docs.travis-ci.com/user/caching/#pip-cache
 cache: pip
+# .. seealso:: https://github.com/travis-ci/travis-ci/issues/9815
+matrix:
+    include:
+        - python: 3.7
+          dist: xenial
+          sudo: true
+
 # see: http://docs.travis-ci.com/user/migrating-from-legacy/
 sudo: false
 install:
@@ -26,5 +25,3 @@ notifications:
         recipients:
             - satoru.satoh+github@gmail.com
         on_failure: always
-
-# vim: sw=2:ts=2:et:
