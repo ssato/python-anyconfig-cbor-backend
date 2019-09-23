@@ -1,22 +1,26 @@
 from __future__ import absolute_import
 
 import glob
-import os.path
 import os
 import re
 import setuptools
 import setuptools.command.bdist_rpm
 
 
-# It might throw IndexError and so on.
-VERSION = [re.search(r'^__version__ = "([^"]+)"', l).groups()[0] for l
-           in open("anyconfig_cbor_backend/__init__.py").readlines()
-           if "__version__" in l][0]
+VERSION = False
+for pyf in glob.glob("*/__init__.py"):
+    matches = [m.groups() for m in (re.match(r'__version__ = "([0-9.]+)"', l)
+                                    for l in open(pyf).readlines()) if m]
+    if matches:
+        VERSION = matches[0][0]
+
+assert VERSION
 
 # For daily snapshot versioning mode:
+RELEASE = "1"
 if os.environ.get("_SNAPSHOT_BUILD", None) is not None:
     import datetime
-    VERSION = VERSION + datetime.datetime.now().strftime(".%Y%m%d")
+    RELEASE = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
 
 class bdist_rpm(setuptools.command.bdist_rpm.bdist_rpm):
@@ -30,6 +34,9 @@ class bdist_rpm(setuptools.command.bdist_rpm.bdist_rpm):
         if "@VERSION@" in line:
             return line.replace("@VERSION@", VERSION)
 
+        if "@RELEASE@" in line:
+            return line.replace("@RELEASE@", RELEASE)
+
         if "Source0:" in line:  # Dirty hack
             return "Source0: %{pkgname}-%{version}.tar.gz"
 
@@ -41,7 +48,6 @@ class bdist_rpm(setuptools.command.bdist_rpm.bdist_rpm):
 
 
 setuptools.setup(version=VERSION,
-                 cmdclass=dict(bdist_rpm=bdist_rpm),
-                 package_dir={'': 'anyconfig_cbor_backend'})
+                 cmdclass=dict(bdist_rpm=bdist_rpm))
 
 # vim:sw=4:ts=4:et:
