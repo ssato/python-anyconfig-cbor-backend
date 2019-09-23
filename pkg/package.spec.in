@@ -1,6 +1,5 @@
 %global bename cbor
 %global pkgname anyconfig-%{bename}-backend
-%global debug_package %{nil}
 
 %global desctxt \
 This is a backend module for python-anyconfig to load and dump CBOR data with\
@@ -11,7 +10,7 @@ various configuration files like INI, JSON and YAML.
 
 Name:           python-%{pkgname}
 Version:        @VERSION@
-Release:        1%{?dist}
+Release:        @RELEASE@%{?dist}
 Summary:        Backend module for python-anyconfig to load and dump CBOR data
 Group:          Development/Libraries
 License:        MIT
