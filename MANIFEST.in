@@ -3,5 +3,5 @@ include MANIFEST.in
 include README.*
 include pkg/*
 include setup.*
-recursive-include anyconfig_cbor_backend *.py
-recursive-include tests *.py *.bats *.cbor
+recursive-include src *.py
+recursive-include tests *.py *.cbor *.bats *.txt
