@@ -27,6 +27,7 @@ class Parser(anyconfig.backend.base.StringStreamFnParser,
              anyconfig.backend.base.BinaryFilesMixin):
     """Parser for CBOR files.
     """
+    _cid = "cbor"
     _type = "cbor"
     _extensions = ["cbor"]
     _dump_opts = ["sort_keys"]
