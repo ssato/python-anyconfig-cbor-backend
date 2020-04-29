@@ -5,7 +5,8 @@
 # pylint: disable=missing-docstring,invalid-name,too-few-public-methods
 from __future__ import absolute_import
 
-import anyconfig_cbor_backend.cbor as TT
+import anyconfig_cbor_backend as TT
+import cbor
 import tests.common as TBC
 
 
@@ -13,7 +14,7 @@ class HasParserTrait(TBC.HasParserTrait):
 
     psr = TT.Parser()
     cnf = dict(a=0, b="bbb", c=5, sect0=dict(d=["x", "y", "z"]))
-    cnf_s = TT.cbor.dumps(cnf)
+    cnf_s = cbor.dumps(cnf)
 
 
 class Test_10(TBC.Test_10_dumps_and_loads, HasParserTrait):
