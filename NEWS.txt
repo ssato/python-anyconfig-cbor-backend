@@ -1,0 +1,23 @@
+0.0.3.999
+-----------
+
+- fix: [rpm] cleanup the RPM SPEC
+- change: Add setup.cfg to cleanup packaging
+- change: [rpm] build Python 3 only by default
+
+0.0.3
+-------
+
+- fix: correct a typo in a keyword argument for setup() in setup.py
+
+0.0.2
+-------
+
+- fix: do not force install tests/\*.py find_package found
+
+0.0.1
+-------
+
+- Initial packaging
+
+.. vim:sw=2:ts=2:et:
