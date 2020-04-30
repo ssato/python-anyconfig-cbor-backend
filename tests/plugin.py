@@ -19,7 +19,7 @@ _CURDIR = os.path.dirname(__file__)
 
 class Test(unittest.TestCase):
 
-    conf_path = os.path.join(_CURDIR, "0.cbor")
+    conf_path = os.path.join(_CURDIR, "res", "0.cbor")
 
     def test_20_load(self):
         try:
