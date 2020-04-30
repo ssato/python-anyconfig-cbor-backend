@@ -14,12 +14,17 @@ python-anyconfig-cbor-backend
    :target: https://coveralls.io/r/ssato/python-anyconfig-cbor-backend
    :alt: Coverage Status
 
-.. image:: https://landscape.io/github/ssato/python-anyconfig-cbor-backend/master/landscape.png
+.. image:: https://scrutinizer-ci.com/g/ssato/python-anyconfig-cbor-backend/badges/quality-score.png
+   :target: https://scrutinizer-ci.com/g/ssato/python-anyconfig-cbor-backend
+   :alt: [Code Quality by Scrutinizer]
+
+.. landscape looks stopped their service.
+.. .. image:: https://landscape.io/github/ssato/python-anyconfig-cbor-backend/master/landscape.png
    :target: https://landscape.io/github/ssato/python-anyconfig-cbor-backend/master
    :alt: Code Health
 
 This is a backend module for python-anyconfig to support to load and dump CBOR
-files with using cbor, https://pypi.python.org/pypi/cbor.
+files with using cbor.
 
 - Author: Satoru SATOH <ssato@redhat.com>
 - License: MIT
@@ -27,11 +32,8 @@ files with using cbor, https://pypi.python.org/pypi/cbor.
 SEE ALSO:
 
 - python-anyconfig: https://pypi.python.org/pypi/anyconfig
+- cbor: https://pypi.python.org/pypi/cbor
 - CBOR spec: http://cbor.io
-- Download:
-
-  - PyPI: https://pypi.python.org/pypi/anyconfig-cbor-backend
-  - Copr RPM repos: https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/
 
 Build & Install
 ================
