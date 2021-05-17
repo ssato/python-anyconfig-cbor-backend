@@ -6,9 +6,9 @@ python-anyconfig-cbor-backend
    :target: https://pypi.python.org/pypi/anyconfig-cbor-backend/
    :alt: [Latest Version]
 
-.. image:: https://img.shields.io/travis/ssato/python-anyconfig-cbor-backend.svg
-   :target: https://travis-ci.org/ssato/python-anyconfig-cbor-backend
-   :alt: Test status
+.. image:: https://github.com/ssato/python-anyconfig-bson-backend/workflows/Tests/badge.svg
+   :target: https://github.com/ssato/python-anyconfig-bson-backend/actions?query=workflow%3ATests
+   :alt: [Github Actions: Test status]
 
 .. image:: https://img.shields.io/coveralls/ssato/python-anyconfig-cbor-backend.svg
    :target: https://coveralls.io/r/ssato/python-anyconfig-cbor-backend

@@ -1,8 +1,7 @@
 #
-# Copyright (C) 2017 - 2018 Satoru SATOH <ssato @ redhat.com>
+# Copyright (C) 2017 - 2021 Satoru SATOH <satoru.satoh@gmail.com>
 # License: MIT
 #
-# pylint: disable=too-many-ancestors
 r"""CBOR backend:
 
 - Format to support: CBOR, http://cbor.io, https://tools.ietf.org/html/rfc7049
@@ -18,13 +17,14 @@ Changelog:
 
     .. versionadded:: 0.8.3
 """
-from __future__ import absolute_import
-import anyconfig.backend.base
 import cbor
+
+import anyconfig.backend.base
 
 
 class Parser(anyconfig.backend.base.StringStreamFnParser,
-             anyconfig.backend.base.BinaryFilesMixin):
+             anyconfig.backend.base.BinaryLoaderMixin,
+             anyconfig.backend.base.BinaryDumperMixin):
     """Parser for CBOR files.
     """
     _cid = "cbor"
