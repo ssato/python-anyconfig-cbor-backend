@@ -1,6 +1,10 @@
 coveralls
 flake8
 mock
-nose
 pycodestyle
 pylint
+pytest
+pytest-cov
+pytest-profiling
+pytest-randomly
+pytest-xdist[psutil]
